@@ -17,7 +17,6 @@
 	dcterms:created "2017-04-17"^^xsd:date ;
 	dcterms:creator _:genid1 ;
 	dcterms:license <http://www.opengeospatial.org/ogc/Software> , <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
-	vann:preferredNamespacePrefix "ssn" ;
 	vann:preferredNamespaceUri "http://www.w3.org/ns/ssn/" ;
 	rdfs:comment "Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ;
 	rdfs:seeAlso <https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology> ;

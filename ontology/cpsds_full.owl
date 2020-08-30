@@ -288,6 +288,22 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/locationAfterOf -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/locationAfterOf">
+        <rdfs:comment>Located after another element</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/locationBeforeOf -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/locationBeforeOf">
+        <rdfs:comment>Located before another element.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/needs_system_capability -->
 
     <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/needs_system_capability">
@@ -575,6 +591,15 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/locationTrackElement -->
+
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/locationTrackElement">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
+        <rdfs:comment>Track elements like Segments and Crossings</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/dds/DataReader -->
 
     <rdf:Description rdf:about="http://inf.mit.bme.hu/research/dds/DataReader">
@@ -807,6 +832,25 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/CarRadar -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/CarRadar">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Radar identifies objects around the car.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/CarVideoCamera -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/CarVideoCamera">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Built in Video Camera for observing environment and objects around the car.</rdfs:comment>
+        <rdfs:label xml:lang="en">CarVideoCamera</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Domain_0 -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Domain_0">
@@ -824,6 +868,15 @@
         <Celsius_Result rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</Celsius_Result>
         <qudt-1-1:unit xml:lang="en">qudt-unit-1-1:DegreeCelsius</qudt-1-1:unit>
         <rdfs:label xml:lang="en">qudt-1-1:QuantityValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/FixedVideoCamera -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/FixedVideoCamera">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Located in UnguardedLevelCrossing for identifying object in the crossing</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -931,6 +984,27 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Segment-1 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Segment-1">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        <locationAfterOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment-2"/>
+        <locationBeforeOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing"/>
+        <rdfs:comment xml:lang="en">Segment after Segment-2, before UnguardedLevelCrossing</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Segment-2 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Segment-2">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        <locationBeforeOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment-1"/>
+        <rdfs:comment xml:lang="en">Segment before Segment-1</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1123,6 +1197,17 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        <locationAfterOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment-1"/>
+        <locationBeforeOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment+1"/>
+        <rdfs:comment xml:lang="en">Segment before Segment+1, after Segment-1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Celsius -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius">
@@ -1168,6 +1253,36 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/WeightSensor -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/WeightSensor">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Observes the weight on the current element.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Segment+1 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Segment+1">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        <locationAfterOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing"/>
+        <locationBeforeOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment+2"/>
+        <rdfs:comment xml:lang="en">Segment before Segment+2, after UnguardedLevelCrossing</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Segment+2 -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Segment+2">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        <locationAfterOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Segment+1"/>
+        <rdfs:comment xml:lang="en">Segment after Segment+1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1178,6 +1293,28 @@
 
     <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
         <rdfs:comment xml:lang="hu">mintavételezés</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Block"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Building"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Room"/>
+            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 

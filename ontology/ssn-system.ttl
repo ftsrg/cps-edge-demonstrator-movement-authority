@@ -17,7 +17,6 @@
 	owl:imports <http://www.w3.org/ns/ssn/> ;
 	dcterms:created "2017-05-14"^^xsd:date ;
 	dcterms:creator _:genid1 ;
-	dcterms:description "This ontology describes system capabilities, operating ranges, and survival ranges."@en ;
 	dcterms:license <http://www.opengeospatial.org/ogc/Software> , <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
 	dcterms:title "System capabilities, operating ranges, and survival ranges ontology"@en ;
 	vann:preferredNamespacePrefix "ssn-system" ;
