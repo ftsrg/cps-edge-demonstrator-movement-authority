@@ -1,8 +1,6 @@
 # Ontology
 
-Use CPSDS.
-
-Initial ontology which contains:
+CPSDS ontology contains:
  - SSN
  - SSN-Systems
  - DDS
@@ -13,6 +11,9 @@ namespaces, with some example data:
  - Places
  - Infrastrucure elements
  - Sensors with capabilities.
+
+To start work, download Protege ontology editor https://protege.stanford.edu/ .  
+Load cpsds_full.owl ontology.
 
 # Sensors
 Ontology class for sensors, described in sosa:Sensor.
