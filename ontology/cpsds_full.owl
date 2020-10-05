@@ -405,170 +405,9 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/Block -->
-
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Block">
-        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Building -->
-
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Building">
-        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Campus -->
-
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus">
-        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Floor -->
-
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor">
-        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Location -->
 
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Location">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Inside_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Location"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Room -->
-
-    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Room">
-        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Inside_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Location_of"/>
-                <owl:allValuesFrom rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://inf.mit.bme.hu/research/cpsds/Location"/>
     
 
 
@@ -808,7 +647,6 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Block_B -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Block_B">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
     </owl:NamedIndividual>
     
@@ -817,7 +655,6 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Building_I -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Building_I">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
     </owl:NamedIndividual>
     
@@ -826,7 +663,6 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Campus_BME -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus_BME">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
     </owl:NamedIndividual>
     
@@ -847,6 +683,38 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:comment xml:lang="en">Built in Video Camera for observing environment and objects around the car.</rdfs:comment>
         <rdfs:label xml:lang="en">CarVideoCamera</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Crossing_node -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Crossing_node">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Crossing node</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Crossing_platform -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Crossing_platform">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="http://inf.mit.bme.hu/research/cpsds/Crossing_node"/>
+        <sosa:hosts rdf:resource="http://inf.mit.bme.hu/research/cpsds/Crossing_video_node"/>
+        <rdfs:comment xml:lang="en">Crossing that hosts multiple sensors, cameras, communicate with the Vehicles</rdfs:comment>
+        <rdfs:label xml:lang="en">Crossing platform</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Crossing_video_node -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Crossing_video_node">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Crossing video node</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -884,9 +752,21 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Floor_4 -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor_4">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Movement_authority_demo_platform -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Movement_authority_demo_platform">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <sosa:hosts rdf:resource="http://inf.mit.bme.hu/research/cpsds/Crossing_platform"/>
+        <sosa:hosts rdf:resource="http://inf.mit.bme.hu/research/cpsds/Train_node"/>
+        <sosa:hosts rdf:resource="http://inf.mit.bme.hu/research/cpsds/Vehicle_node"/>
+        <rdfs:comment xml:lang="en">The demo platform the the TDK demonstrator</rdfs:comment>
+        <rdfs:label xml:lang="en">Movement authority demo platform</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -974,17 +854,13 @@
 
     <!-- http://inf.mit.bme.hu/research/cpsds/Room_405 -->
 
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_405">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
     
 
 
     <!-- http://inf.mit.bme.hu/research/cpsds/Room_406 -->
 
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
     
 
 
@@ -1197,6 +1073,16 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Train_node -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Train_node">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Train node</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing">
@@ -1228,6 +1114,16 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Kelvin">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Vehicle_node -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Vehicle_node">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:label xml:lang="en">Vehicle node</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1293,28 +1189,6 @@
 
     <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
         <rdfs:comment xml:lang="hu">mintavételezés</rdfs:comment>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Block"/>
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Building"/>
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus"/>
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor"/>
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/Room"/>
-            <rdf:Description rdf:about="http://inf.mit.bme.hu/research/cpsds/locationTrackElement"/>
-        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
