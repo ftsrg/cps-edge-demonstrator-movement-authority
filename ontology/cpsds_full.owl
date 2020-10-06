@@ -197,6 +197,15 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_Procedure -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Procedure">
+        <rdfs:comment>Dataflow element has an ssn procedure</rdfs:comment>
+        <rdfs:label>has Procedure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/has_Temperature_result -->
 
     <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Temperature_result">
@@ -210,6 +219,22 @@
     <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_Virtual_Sensor_Output">
         <owl:inverseOf rdf:resource="http://inf.mit.bme.hu/research/cpsds/is_Virtual_Sensor_Output_of"/>
         <rdfs:label xml:lang="en">has Virtual Sensor Output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_dfinput -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_dfinput">
+        <rdfs:label>has dfinput</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/has_dfoutput -->
+
+    <owl:ObjectProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/has_dfoutput">
+        <rdfs:label>has dfoutput</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -559,6 +584,25 @@
     
 
 
+    <!-- https://w3id.org/dfd#DataFlow_element -->
+
+    <rdf:Description rdf:about="https://w3id.org/dfd#DataFlow_element">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_Procedure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/has_dfinput"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- https://w3id.org/dfd#Interface -->
 
     <rdf:Description rdf:about="https://w3id.org/dfd#Interface">
@@ -668,21 +712,72 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/CarRadar -->
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_AI_VideoToObj -->
 
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/CarRadar">
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_AI_VideoToObj">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:comment xml:lang="en">Radar identifies objects around the car.</rdfs:comment>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/CarVideoCamera -->
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_Crossing_occupancy -->
 
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/CarVideoCamera">
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_Crossing_occupancy">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:comment xml:lang="en">Built in Video Camera for observing environment and objects around the car.</rdfs:comment>
-        <rdfs:label xml:lang="en">CarVideoCamera</rdfs:label>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_Crossing_occupancy"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_ExpectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_ExpectedTTL">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_expectedTTL"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_Train_approach_calc -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_Train_approach_calc">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_approach_estimate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_VehicleTelemetryFormatter -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_VehicleTelemetryFormatter">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Compute_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_risk_level_assessment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_risk_level_assessment"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_risk_level_assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Crossing_Radar -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Crossing_Radar">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_Crossing_occupancy"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy"/>
     </owl:NamedIndividual>
     
 
@@ -744,6 +839,8 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/FixedVideoCamera">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
         <rdfs:comment xml:lang="en">Located in UnguardedLevelCrossing for identifying object in the crossing</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -754,6 +851,15 @@
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor_4">
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
         <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:comment xml:lang="en">Input about crossing occupancy, e.g. radar sensor data</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -799,6 +905,15 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Obseration_train_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Obseration_train_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405 -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405">
@@ -822,6 +937,129 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_Crossing_occupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_Crossing_occupancy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy"/>
+        <rdfs:comment xml:lang="en">The occupancy of the crossing</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_expectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_expectedTTL">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_object_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection"/>
+        <rdfs:comment xml:lang="en">From vehicle telemetry and fixed video camera, detects object&apos;s speed, pos, type...</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_rail_signal -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_rail_signal">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_rail_signal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_risk_level_assessment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_risk_level_assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_schedule -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_schedule">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_schedule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_approach_estimate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Observation_vehicle_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Observation_vehicle_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_vehicle_telemetry"/>
+        <rdfs:comment xml:lang="en">Observation of the vehicle telemetry</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_object_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_object_detection">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement">
@@ -829,6 +1067,131 @@
         <ssn:hasInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Input"/>
         <ssn:hasOutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Output"/>
         <rdfs:label xml:lang="en">Procedure Room Temperature Measurement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <ssn:hasInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_fixed_camera_stream -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_fixed_camera_stream">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_radar_occupancy_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_radar_occupancy_detection">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_rail_signal -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_rail_signal">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_railway_alerts -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_railway_alerts">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_risk_level_assessment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_schedule -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_schedule">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_siren -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_siren">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_train_approach_estimate -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_train_approach_estimate">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment xml:lang="en">Procedure of observing the train telemetry.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_vehicle_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_vehicle_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Rail_signal -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Rail_signal">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_rail_signal"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_rail_signal"/>
     </owl:NamedIndividual>
     
 
@@ -861,6 +1224,17 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Room_406 -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Schedule_app -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Schedule_app">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_schedule"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_schedule"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1083,6 +1457,17 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Train_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Train_telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Obseration_train_telemetry"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/UnguardedLevelCrossing">
@@ -1118,6 +1503,17 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Vehicle_Telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Vehicle_Telemetry">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection"/>
+        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_vehicle_telemetry"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_vehicle_telemetry"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Vehicle_node -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Vehicle_node">
@@ -1149,11 +1545,93 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/WeightSensor -->
+    <!-- http://inf.mit.bme.hu/research/cpsds/actuator_autonomous_vehicle_commands -->
 
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/WeightSensor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <rdfs:comment xml:lang="en">Observes the weight on the current element.</rdfs:comment>
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/actuator_autonomous_vehicle_commands">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/actuator_railway_alerts -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/actuator_railway_alerts">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_railway_alerts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/actuator_siren -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/actuator_siren">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_siren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_crossing_occupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_crossing_occupancy">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_expectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_expectedTTL">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_object_detection"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_fixed_video_stream -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_fixed_video_stream">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_fixed_camera_stream"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_object_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_object_detection">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_object_detection"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_object_detection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_radar -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_radar">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_radar_occupancy_detection"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_vehicle_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_vehicle_telemetry">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_vehicle_telemetry"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry"/>
     </owl:NamedIndividual>
     
 
