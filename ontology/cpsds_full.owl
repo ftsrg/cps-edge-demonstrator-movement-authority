@@ -1020,6 +1020,14 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_autonomous_vehicle_commands -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_autonomous_vehicle_commands">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy">
@@ -1047,6 +1055,64 @@
     <!-- http://inf.mit.bme.hu/research/cpsds/Output_object_detection -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_object_detection">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_rail_signaling -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_rail_signaling">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_position"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_railway_alerts -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_railway_alerts">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_schedule -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_schedule">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_siren -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_siren">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_train_position -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_train_position">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
     </owl:NamedIndividual>
     
@@ -1572,6 +1638,17 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_autonomous_vehicle_commands -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_autonomous_vehicle_commands">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_autonomous_vehicle_commands"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_crossing_occupancy -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_crossing_occupancy">
@@ -1622,6 +1699,83 @@
         <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_radar_occupancy_detection"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_rail_signaling -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_rail_signaling">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_rail_signal"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_rail_signaling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_railway_alerts -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_railway_alerts">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_railway_alerts"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_railway_alerts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_risk_level_assessment">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_risk_level_assessment"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_schedule -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_schedule">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_schedule"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_schedule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_siren -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_siren">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_siren"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_siren"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_train_approach_estimate -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_train_approach_estimate">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_approach_estimate"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_rail_signaling"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_schedule"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_position"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_train_position -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_train_position">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
     </owl:NamedIndividual>
     
 
