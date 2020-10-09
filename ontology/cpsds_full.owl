@@ -855,15 +855,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Input"/>
-        <rdfs:comment xml:lang="en">Input about crossing occupancy, e.g. radar sensor data</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Movement_authority_demo_platform -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Movement_authority_demo_platform">
@@ -1016,6 +1007,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_radar"/>
     </owl:NamedIndividual>
     
 
@@ -1024,6 +1016,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_autonomous_vehicle_commands">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_autonomous_vehicle_commands"/>
     </owl:NamedIndividual>
     
 
@@ -1032,6 +1025,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_crossing_occupancy"/>
     </owl:NamedIndividual>
     
 
@@ -1040,6 +1034,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_expectedTTL"/>
     </owl:NamedIndividual>
     
 
@@ -1048,6 +1043,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_fixed_video_stream"/>
     </owl:NamedIndividual>
     
 
@@ -1056,6 +1052,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_object_detection">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_object_detection"/>
     </owl:NamedIndividual>
     
 
@@ -1064,8 +1061,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_rail_signaling">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
-        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry"/>
-        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_position"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_rail_signaling"/>
     </owl:NamedIndividual>
     
 
@@ -1074,6 +1070,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_railway_alerts">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_railway_alerts"/>
     </owl:NamedIndividual>
     
 
@@ -1082,6 +1079,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_risk_level_assessment"/>
     </owl:NamedIndividual>
     
 
@@ -1090,6 +1088,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_schedule">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_schedule"/>
     </owl:NamedIndividual>
     
 
@@ -1098,6 +1097,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_siren">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_siren"/>
     </owl:NamedIndividual>
     
 
@@ -1106,6 +1106,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_train_approach_estimate"/>
     </owl:NamedIndividual>
     
 
@@ -1114,6 +1115,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_train_position">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_train_position"/>
     </owl:NamedIndividual>
     
 
@@ -1122,6 +1124,7 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry">
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <dds:has_Topic rdf:resource="http://inf.mit.bme.hu/research/cpsds/Topic_vehicle_telemetry"/>
     </owl:NamedIndividual>
     
 
@@ -1149,7 +1152,6 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-        <ssn:hasInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Input_CrossingOccupancy"/>
     </owl:NamedIndividual>
     
 
@@ -1509,6 +1511,132 @@
         <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
         <dds:IDL_File_Location>./topic2.idl</dds:IDL_File_Location>
         <dds:TopicName>Topic2</dds:TopicName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_autonomous_vehicle_commands -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_autonomous_vehicle_commands">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_autonomous_vehicle_commands.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_crossing_occupancy -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_crossing_occupancy">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_crossing_occupancy.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_expectedTTL -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_expectedTTL">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_expectedTTL.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_fixed_video_stream -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_fixed_video_stream">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_fixed_video_stream.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_object_detection -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_object_detection">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_object_detection.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_radar -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_radar">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_radar.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_rail_signaling -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_rail_signaling">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_rail_signaling.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_railway_alerts -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_railway_alerts">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_railway_alerts.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_risk_level_assessment -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_risk_level_assessment">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_risk_level_assessment.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_schedule -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_schedule">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_schedule.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_siren -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_siren">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_siren.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_train_approach_estimate -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_train_approach_estimate">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_train_approach_estimate.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_train_position -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_train_position">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_train_position.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_vehicle_telemetry -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_vehicle_telemetry">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <dds:IDL_File_Location>Topic_vehicle_telemetry.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
 
