@@ -393,6 +393,12 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/hasFlag -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/hasFlag"/>
+    
+
+
     <!-- http://schema.org/ID -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/ID"/>
@@ -536,6 +542,7 @@
     <!-- http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object -->
 
     <rdf:Description rdf:about="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Object">
+        <rdfs:subClassOf rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
@@ -1773,6 +1780,7 @@
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_autonomous_vehicle_commands"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1784,6 +1792,7 @@
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_crossing_occupancy"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_RadarOccupancy"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_crossing_occupancy"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1795,6 +1804,7 @@
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_expectedTTL"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_object_detection"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1817,6 +1827,7 @@
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_vehicle_telemetry"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_object_detection"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1848,6 +1859,7 @@
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_railway_alerts"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_railway_alerts"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1861,6 +1873,7 @@
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_expectedTTL"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1882,6 +1895,7 @@
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_siren"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_risk_level_assessment"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_siren"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
@@ -1896,6 +1910,7 @@
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_schedule"/>
         <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_position"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_train_approach_estimate"/>
+        <hasFlag>EventBased</hasFlag>
     </owl:NamedIndividual>
     
 
