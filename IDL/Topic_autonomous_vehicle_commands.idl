@@ -1,0 +1,15 @@
+enum AutonomousVehicleNotifications {
+    STOP,
+	TRAINMIGHTARRIVE,
+	LOOKAROUND,
+	PASSSLOWLY
+};
+
+struct AutonomousVehicleCommands
+{
+    string commandId;
+    float issuedTime;
+    AutonomousVehicleNotifications message;
+   
+};
+

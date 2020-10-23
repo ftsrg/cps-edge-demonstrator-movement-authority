@@ -1,0 +1,20 @@
+enum VehicleType{
+	BIKE,
+	CAR,
+	BUS,
+	CONVOY,
+	PARAGLIDER
+};
+
+struct Pos {
+    string x;
+	string y;
+};
+
+struct crossingOccupancy{
+    float detectionTime; 
+    Pos detectionPos;
+    float speed;
+	VehicleType vehicleType;
+	string licensePlate;
+};

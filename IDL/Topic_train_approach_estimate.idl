@@ -1,0 +1,13 @@
+struct Pos {
+    string x;
+	string y;
+};
+
+struct TrainApproachEstimate{
+	string estimationId;
+	float estimationTime;
+	float validTime;
+    Pos detectionPos;
+    float speed;
+	string trainId;
+};

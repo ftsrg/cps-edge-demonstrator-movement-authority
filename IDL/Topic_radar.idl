@@ -1,0 +1,7 @@
+struct RadarData
+{
+    string radarId;
+	boolean isOccupied;
+	float readTime;
+    
+};

@@ -1,0 +1,13 @@
+struct Pos {
+    string x;
+	string y;
+};
+
+struct TrainPositionTelemetry{
+	string telemetryID;
+	float telemetryTime;
+    Pos detectionPos;
+    float speed;
+	string trainId;
+
+};

@@ -393,6 +393,12 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/IDLData -->
+
+    <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/IDLData"/>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/hasFlag -->
 
     <owl:DatatypeProperty rdf:about="http://inf.mit.bme.hu/research/cpsds/hasFlag"/>
@@ -634,91 +640,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/BME_IB405 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BME_IB405">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus_BME"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/BME_IB406 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BME_IB406">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Location"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Campus_BME"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone1 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone1">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone2 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone2">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/BeagleBone3 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/BeagleBone3">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Worker"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
-        <ssn:hasSubSystem rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Block_B -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Block_B">
-        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Floor_4"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Building_I -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Building_I">
-        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Block_B"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Campus_BME -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Campus_BME">
-        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Building_I"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Compute_AI_VideoToObj -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Compute_AI_VideoToObj">
@@ -831,17 +752,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <Celsius_Result rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</Celsius_Result>
-        <qudt-1-1:unit xml:lang="en">qudt-unit-1-1:DegreeCelsius</qudt-1-1:unit>
-        <rdfs:label xml:lang="en">qudt-1-1:QuantityValue</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/FixedVideoCamera -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/FixedVideoCamera">
@@ -849,15 +759,6 @@
         <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_object_detection"/>
         <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/Observation_train_approach_estimate"/>
         <rdfs:comment xml:lang="en">Located in UnguardedLevelCrossing for identifying object in the crossing</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Floor_4 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Floor_4">
-        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
-        <has_Inside_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
     </owl:NamedIndividual>
     
 
@@ -883,54 +784,11 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/NormalLifetime -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/NormalLifetime">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemLifetime"/>
-        <rdfs:comment xml:lang="en">In probability theory, a normal distribution is a type of continuous probability distribution for a real-valued random variable</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
-        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">80</ssn-system:maxValue>
-        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-40</ssn-system:minValue>
-        <rdfs:comment xml:lang="en">A temperature range of -40 to 80 Celsius.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Obseration_train_telemetry -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Obseration_train_telemetry">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_train_telemetry"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
-        <needs_system_capability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
-        <sosa:hasFeatureOfInterest rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/ObservationT405 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ObservationT405">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <sosa:hasSample rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m"/>
-        <sosa:usedProcedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
-        <rdfs:comment xml:lang="en">Observation of inside temperature.</rdfs:comment>
-        <sosa:hasResult rdf:resource="http://inf.mit.bme.hu/research/cpsds/ExampleCelsiusResult1"/>
-        <sosa:observedProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
     </owl:NamedIndividual>
     
 
@@ -1136,17 +994,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
-        <ssn:hasInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Input"/>
-        <ssn:hasOutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Temperature_Output"/>
-        <rdfs:label xml:lang="en">Procedure Room Temperature Measurement</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_autonomous_vehicle_commands">
@@ -1279,29 +1126,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/ReadTempPod -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/ReadTempPod">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Pod"/>
-        <kubernetes:has_Container rdf:resource="http://inf.mit.bme.hu/research/cpsds/ReadTempContainer"/>
-        <kubernetes:has_Namespace rdf:resource="http://inf.mit.bme.hu/research/cpsds/NamespaceDefault"/>
-        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Room_405 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_405"/>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Room_406 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Room_406"/>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Schedule_app -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Schedule_app">
@@ -1334,198 +1158,24 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Accuracy"/>
-        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.5</ssn-system:maxValue>
-        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-0.5</ssn-system:minValue>
-        <rdfs:comment xml:lang="en">The accuracy of the temperature sensor is +-0.5 °C in normal temperature and humidity conditions.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorAccuracy"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
-        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
-        <systems:hasSystemProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
-        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorFrequency">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Frequency"/>
-        <ssn-system:value rdf:datatype="http://qudt.org/1.1/vocab/unit#Second">2</ssn-system:value>
-        <rdfs:comment xml:lang="en">The smallest possible time between one observation and the next is 2 s on average.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
-        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
-        <rdfs:comment xml:lang="en">The conditions in which the DHT22 temperature sensor is expected to operate.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorPrecision">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Precision"/>
-        <ssn-system:maxValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.2</ssn-system:maxValue>
-        <ssn-system:minValue rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">-0.2</ssn-system:minValue>
-        <rdfs:comment>The precision (= repeatability) of the temperature sensor is +-0.2 °C in normal temperature and humidity conditions.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSensitivity">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Sensitivity"/>
-        <ssn-system:value rdf:datatype="http://qudt.org/1.1/vocab/unit#DegreeCelsius">0.1</ssn-system:value>
-        <rdfs:comment xml:lang="en">The sensitivity and resolution of the temperature sensor is 0.1 °C in normal temperature and humidity conditions.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SurvivalRange"/>
-        <systems:hasSurvivalProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalLifetime"/>
-        <systems:inCondition rdf:resource="http://inf.mit.bme.hu/research/cpsds/NormalTemperatureCondition"/>
-        <rdfs:comment xml:lang="en">The survival range of the temperature sensor in normal temperature conditions.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Average_1m">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Input -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Input">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Input"/>
-        <rdfs:label xml:lang="en">Temperature Input</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Output -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Output">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
-        <rdfs:label xml:lang="en">Temperature Output</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
-        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservationT405"/>
-        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
-        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
-        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
-        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
-        <ssn-system:ID>Temperature Sensor1</ssn-system:ID>
-        <rdfs:comment xml:lang="en">The embedded temperature sensor, a specific instance of temperature sensor.</rdfs:comment>
-        <rdfs:label xml:lang="en">Temperature Sensor1</rdfs:label>
-        <sosa:observes rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor2">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB405"/>
-        <sosa:madeObservation rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservationT405"/>
-        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
-        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
-        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
-        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_fahrenheit"/>
-        <ssn-system:ID>Temperature Sensor2</ssn-system:ID>
-        <rdfs:comment xml:lang="en">The embedded temperature sensor, a specific instance of temperature sensor.</rdfs:comment>
-        <rdfs:label xml:lang="en">Temperature Sensor2</rdfs:label>
-        <sosa:observes rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Temperature_Sensor3">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <has_Location rdf:resource="http://inf.mit.bme.hu/research/cpsds/BME_IB406"/>
-        <ssn:implements rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_Room_Temperature_Measurement"/>
-        <systems:hasOperatingRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorOperatingRange"/>
-        <systems:hasSurvivalRange rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorSurvivalRange"/>
-        <systems:hasSystemCapability rdf:resource="http://inf.mit.bme.hu/research/cpsds/TemperatureSensorCapability_celsius"/>
-        <ssn-system:ID>Temperature Sensor3</ssn-system:ID>
-        <rdfs:label xml:lang="en">Temperature Sensor3</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Topic1 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic1">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
-        <has_Domain rdf:resource="http://inf.mit.bme.hu/research/cpsds/Domain_0"/>
-        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
-        <dds:IDL_File_Location>./topic1.idl</dds:IDL_File_Location>
-        <dds:TopicName>Topic1</dds:TopicName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Topic2 -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic2">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
-        <has_Domain rdf:resource="http://inf.mit.bme.hu/research/cpsds/Domain_0"/>
-        <ssn:hasProperty rdf:resource="http://inf.mit.bme.hu/research/cpsds/ObservablePropertyTemperature405"/>
-        <dds:IDL_File_Location>./topic2.idl</dds:IDL_File_Location>
-        <dds:TopicName>Topic2</dds:TopicName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Topic_autonomous_vehicle_commands -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_autonomous_vehicle_commands">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum AutonomousVehicleNotifications {
+    STOP,
+	TRAINMIGHTARRIVE,
+	LOOKAROUND,
+	PASSSLOWLY
+};
+
+struct AutonomousVehicleCommands
+{
+    string commandId;
+    float issuedTime;
+    AutonomousVehicleNotifications message;
+   
+};</IDLData>
         <dds:IDL_File_Location>Topic_autonomous_vehicle_commands.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1535,6 +1185,26 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_crossing_occupancy">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum VehicleType{
+	BIKE,
+	CAR,
+	BUS,
+	CONVOY,
+	PARAGLIDER
+};
+
+struct Pos {
+    string x;
+	string y;
+};
+
+struct crossingOccupancy{
+    float detectionTime; 
+    Pos detectionPos;
+    float speed;
+	VehicleType vehicleType;
+	string licensePlate;
+};</IDLData>
         <dds:IDL_File_Location>Topic_crossing_occupancy.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1544,6 +1214,27 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_expectedTTL">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum VehicleType{
+	BIKE,
+	CAR,
+	BUS,
+	CONVOY,
+	PARAGLIDER
+};
+
+struct Pos {
+    string x;
+	string y;
+};
+
+struct ExpectedTTL{
+    float detectionTime; 
+    Pos detectionPos;
+    float speed;
+	VehicleType vehicleType;
+	string licensePlate;
+	float expectedTTL;
+};</IDLData>
         <dds:IDL_File_Location>Topic_expectedTTL.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1553,6 +1244,11 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_fixed_video_stream">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct FixedVideoStream{
+	string cameraID;
+	string cameraData;
+
+};</IDLData>
         <dds:IDL_File_Location>Topic_fixed_video_stream.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1562,6 +1258,26 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_object_detection">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum VehicleType{
+	BIKE,
+	CAR,
+	BUS,
+	CONVOY,
+	PARAGLIDER
+};
+
+struct Pos {
+    string x;
+	string y;
+};
+
+struct ObjectDetection{
+    float detectionTime; 
+    Pos detectionPos;
+    float speed;
+	VehicleType vehicleType;
+	string licensePlate;
+};</IDLData>
         <dds:IDL_File_Location>Topic_object_detection.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1571,6 +1287,13 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_radar">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct RadarData
+{
+    string radarId;
+	boolean isOccupied;
+	float readTime;
+    
+};</IDLData>
         <dds:IDL_File_Location>Topic_radar.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1580,6 +1303,12 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_rail_signaling">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct RailwaySignaling{
+	string sensorID;
+	boolean isOccupied;
+	float readTime;
+	string trainID;
+};</IDLData>
         <dds:IDL_File_Location>Topic_rail_signaling.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1589,6 +1318,18 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_railway_alerts">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum RailwayAlertsType{
+	SLOW,
+	STOP,
+	EMERGENCYSTOP
+};
+
+struct RailwayAlerts{
+	string alertID;
+	float issuedTime;
+	float validDuration;
+	RailwayAlertsType alertType;
+};</IDLData>
         <dds:IDL_File_Location>Topic_railway_alerts.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1598,6 +1339,19 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_risk_level_assessment">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum RiskLevel{
+	LOW,
+	MID,
+	HIGH,
+	EMERGENCY
+};
+
+struct RiskLevelAssesment{
+	string riskID;
+	float issuedTime;
+	float validDuration;
+	RiskLevel riskLevel;
+};</IDLData>
         <dds:IDL_File_Location>Topic_risk_level_assessment.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1607,6 +1361,18 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_schedule">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>enum Direction {
+    fromUp,
+	fromDown
+};
+
+struct ScheduleData
+{
+    float expectedTrainArriveTime; 
+    Direction direction;
+    string trainID;
+    
+};</IDLData>
         <dds:IDL_File_Location>Topic_schedule.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1616,6 +1382,12 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_siren">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct Siren{
+	string sirenID;
+	string command;
+	float issuedTime;
+	float validDuration;
+};</IDLData>
         <dds:IDL_File_Location>Topic_siren.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1625,6 +1397,19 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_train_approach_estimate">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct Pos {
+    string x;
+	string y;
+};
+
+struct TrainApproachEstimate{
+	string estimationId;
+	float estimationTime;
+	float validTime;
+    Pos detectionPos;
+    float speed;
+	string trainId;
+};</IDLData>
         <dds:IDL_File_Location>Topic_train_approach_estimate.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1634,6 +1419,19 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_train_position">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct Pos {
+    string x;
+	string y;
+};
+
+struct TrainPositionTelemetry{
+	string telemetryID;
+	float telemetryTime;
+    Pos detectionPos;
+    float speed;
+	string trainId;
+
+};</IDLData>
         <dds:IDL_File_Location>Topic_train_position.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1643,6 +1441,19 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_vehicle_telemetry">
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct Pos {
+    string x;
+	string y;
+};
+
+struct VehicleTelemetry{
+	string telemetryID;
+	float telemetryTime;
+    Pos detectionPos;
+    float speed;
+	string licensePlate;
+
+};</IDLData>
         <dds:IDL_File_Location>Topic_vehicle_telemetry.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
@@ -1680,30 +1491,6 @@
     
 
 
-    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Celsius -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/Unit_Kelvin -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Unit_Kelvin">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://inf.mit.bme.hu/research/cpsds/Vehicle_Telemetry -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Vehicle_Telemetry">
@@ -1721,27 +1508,6 @@
         <rdf:type rdf:resource="http://inf.mit.bme.hu/research/kubernetes/Kubernetes_Node"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:label xml:lang="en">Vehicle node</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/VirtualSensor_CtoF -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/VirtualSensor_CtoF">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/VirtualSensor"/>
-        <hasVirtualSensorInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
-        <has_Virtual_Sensor_Output rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://inf.mit.bme.hu/research/cpsds/VirtualSensor_FtoC -->
-
-    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/VirtualSensor_FtoC">
-        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/cpsds/VirtualSensor"/>
-        <hasVirtualSensorInput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Fahrenheit"/>
-        <has_Virtual_Sensor_Output rdf:resource="http://inf.mit.bme.hu/research/cpsds/Unit_Celsius"/>
-        <DockerImageName>rtiroutingservice_fahrenheittocelsius:1.0</DockerImageName>
     </owl:NamedIndividual>
     
 

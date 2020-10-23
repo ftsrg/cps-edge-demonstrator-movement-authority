@@ -1,0 +1,6 @@
+struct Siren{
+	string sirenID;
+	string command;
+	float issuedTime;
+	float validDuration;
+};

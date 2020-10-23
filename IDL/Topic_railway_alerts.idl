@@ -1,0 +1,12 @@
+enum RailwayAlertsType{
+	SLOW,
+	STOP,
+	EMERGENCYSTOP
+};
+
+struct RailwayAlerts{
+	string alertID;
+	float issuedTime;
+	float validDuration;
+	RailwayAlertsType alertType;
+};

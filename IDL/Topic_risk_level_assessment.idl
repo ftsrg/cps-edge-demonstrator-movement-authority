@@ -1,0 +1,14 @@
+
+enum RiskLevel{
+	LOW,
+	MID,
+	HIGH,
+	EMERGENCY
+};
+
+struct RiskLevelAssesment{
+	string riskID;
+	float issuedTime;
+	float validDuration;
+	RiskLevel riskLevel;
+};

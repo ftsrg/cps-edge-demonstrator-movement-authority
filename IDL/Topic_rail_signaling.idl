@@ -1,0 +1,6 @@
+struct RailwaySignaling{
+	string sensorID;
+	boolean isOccupied;
+	float readTime;
+	string trainID;
+};
