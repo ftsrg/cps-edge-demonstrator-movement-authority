@@ -913,6 +913,30 @@
     
 
 
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_command -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_command">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_info -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_info">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Output_minidemo_train_info -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_train_info">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://inf.mit.bme.hu/research/cpsds/Output_object_detection -->
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Output_object_detection">
@@ -1022,6 +1046,15 @@
 
     <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_fixed_camera_stream">
         <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Procedure_minidemo_controller -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Procedure_minidemo_controller">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:comment>Demo compomenent  for a minidemo. Uses train and car telemetry to send commands to car if it can go or not.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1250,6 +1283,45 @@ struct ExpectedTTL{
 
 };</IDLData>
         <dds:IDL_File_Location>Topic_fixed_video_stream.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_auto_command -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_auto_command">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct AutoCommand{
+	string autoId;
+	string message;
+};</IDLData>
+        <dds:IDL_File_Location>Topic_minidemo_auto_command.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_auto_info -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_auto_info">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct AutoInfo{
+	string autoId;
+	string message;
+};</IDLData>
+        <dds:IDL_File_Location>Topic_minidemo_auto_info.idl</dds:IDL_File_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_train_info -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/Topic_minidemo_train_info">
+        <rdf:type rdf:resource="http://inf.mit.bme.hu/research/dds/Topic"/>
+        <IDLData>struct TrainInfo{
+	string trainId;
+	string message;
+};</IDLData>
+        <dds:IDL_File_Location>Topic_minidemo_train_info.idl</dds:IDL_File_Location>
     </owl:NamedIndividual>
     
 
@@ -1581,6 +1653,18 @@ struct VehicleTelemetry{
         <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
         <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_fixed_camera_stream"/>
         <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_fixed_video_stream"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://inf.mit.bme.hu/research/cpsds/dataflow_element_minidemo_controller -->
+
+    <owl:NamedIndividual rdf:about="http://inf.mit.bme.hu/research/cpsds/dataflow_element_minidemo_controller">
+        <rdf:type rdf:resource="https://w3id.org/dfd#DataFlow_element"/>
+        <has_Procedure rdf:resource="http://inf.mit.bme.hu/research/cpsds/Procedure_minidemo_controller"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_info"/>
+        <has_dfinput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_train_info"/>
+        <has_dfoutput rdf:resource="http://inf.mit.bme.hu/research/cpsds/Output_minidemo_auto_command"/>
     </owl:NamedIndividual>
     
 

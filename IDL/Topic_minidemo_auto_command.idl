@@ -1,0 +1,4 @@
+struct AutoCommand{
+	string autoId;
+	string message;
+};

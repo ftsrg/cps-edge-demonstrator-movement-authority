@@ -1,0 +1,4 @@
+struct AutoInfo{
+	string autoId;
+	string message;
+};

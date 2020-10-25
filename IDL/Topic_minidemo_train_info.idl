@@ -1,0 +1,4 @@
+struct TrainInfo{
+	string trainId;
+	string message;
+};
