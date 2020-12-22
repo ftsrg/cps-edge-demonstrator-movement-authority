@@ -1,6 +1,6 @@
 # Digital Twin Controller
 
- Demo video is here: https://drive.google.com/file/d/1ovfrrTRkI-mmQYge8IJd_Sbq89SVNjUe/view?usp=sharing
+ Demo video is here:
  
  
 **Prerequisites (My computer settings)**
